@@ -17,10 +17,19 @@ Mai Tran
 - https://archive.ics.uci.edu/ml/datasets/Drug+Review+Dataset+%28Drugs.com%29
 
 # What is an individual sample/unit of analysis in this project? In other words, what does one row or observation of the data represent?
-An individual sample of analysis is as follows:
-drugName (categorical): name of drug
-condition (categorical): name of condition
-review (text): patient review
-rating (numerical): 10 star patient rating
-date (date): date of review entry
-usefulCount (numerical): number of users who found review useful
+- An individual sample of analysis is as follows:
+1. drugName (categorical): name of drug
+2. condition (categorical): name of condition
+3. review (text): patient review
+4. rating (numerical): 10 star patient rating
+5. date (date): date of review entry
+6. usefulCount (numerical): number of users who found review useful
+
+# What characteristics/features do you expect to work with? In other words, what are your columns of interest?
+- My columns of interest are: 1) drugName, 2) condition, 3) review, 4) rating, and 6) usefulCount
+
+# If modeling, what will you predict as your target?
+- If modeling, either or a combination of positive drug reviews (text) and high rating (numerical) are my target.
+
+# Tools:
+
