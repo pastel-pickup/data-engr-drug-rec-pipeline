@@ -18,6 +18,9 @@ Mai Tran
 - I am using a dataset of drug reviews from University of California Irvine Machine Learning Repository created by Surya Kallumadi and Felix Gräßer.
 - https://archive.ics.uci.edu/ml/datasets/Drug+Review+Dataset+%28Drugs.com%29
 
+# Do you plan to be able to automatically pull in new data at a regular cadence (e.g with Airflow or a cron job)?
+- This dataset is no longer updated by their creators, so there will not be any new data pull from this dataset. 
+
 # What is an individual sample/unit of analysis in this project? In other words, what does one row or observation of the data represent?
 - An individual sample of analysis is as follows:
 1. drugName (categorical): name of drug
