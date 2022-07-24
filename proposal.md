@@ -9,5 +9,18 @@ Mai Tran
 # Who is your client and how will that client benefits from your end service?
 - My client is CVS, which is looking to provide more online healthcare services for its customers. Both of the healthcare providers as well as customers of CVS could benefit from this PeopleRX recommendation system to help them efficiently pick out drugs that are most suitable for their medical conditions while cutting down time and costs. 
 
+# This is a preliminary diagram of end-to-end data pipeline of PeopleRX:
 
+# Data Description:
+# What dataset(s) do you plan to use, and how will you obtain the data? Please include a link! (The link can be to the dataset you’re downloading, the site you’re scraping, etc.)
+- I am using a dataset of drug reviews from University of California Irvine Machine Learning Repository created by Surya Kallumadi and Felix Gräßer.
+- https://archive.ics.uci.edu/ml/datasets/Drug+Review+Dataset+%28Drugs.com%29
 
+# What is an individual sample/unit of analysis in this project? In other words, what does one row or observation of the data represent?
+An individual sample of analysis is as follows:
+drugName (categorical): name of drug
+condition (categorical): name of condition
+review (text): patient review
+rating (numerical): 10 star patient rating
+date (date): date of review entry
+usefulCount (numerical): number of users who found review useful
