@@ -1,7 +1,7 @@
 # PeopleRX: A Drug Recommendation System For The People By The People
 Mai Tran
 
-# Question/Need:
+# QUESTION/NEED:
 # What is the end service that your project will provide? What is the purpose of the system you plan to build?
 - End service of the project is to recommend top 3 most effective medications for a given medical condition inputted by end user. 
 - This drug recommendation system serves as a clinical decision support (CDS) system to help both healthcare providers and patients to be more informed in choosing the most appropriate drugs for the patient's medical condition. This PeopleRX drug recommendation system will also serve as a backup reference to supplement the medical knowledge of the healthcare providers, and to help them make better decisions for their patients, allow them to spend more quality care time together, and to improve the overall care experience of the patient.
@@ -11,7 +11,7 @@ Mai Tran
 
 # This is a preliminary diagram of end-to-end data pipeline of PeopleRX:
 
-# Data Description:
+# DATA DESCRIPTION:
 # What dataset(s) do you plan to use, and how will you obtain the data? Please include a link! (The link can be to the dataset you’re downloading, the site you’re scraping, etc.)
 - I am using a dataset of drug reviews from University of California Irvine Machine Learning Repository created by Surya Kallumadi and Felix Gräßer.
 - https://archive.ics.uci.edu/ml/datasets/Drug+Review+Dataset+%28Drugs.com%29
@@ -31,5 +31,12 @@ Mai Tran
 # If modeling, what will you predict as your target?
 - If modeling, either or a combination of positive drug reviews (text) and high rating (numerical) are my target.
 
-# Tools:
+# TOOLS:
+- MongoDB - data storage
+- Spark - data processing
+- Airflow - data testing
+- Streamlit - web depoyment
 
+# MVP GOAL:
+# What would a minimum viable product (MVP) look like for this project?
+- data stored in MongoDB and processed in Spark
