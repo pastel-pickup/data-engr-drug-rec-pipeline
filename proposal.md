@@ -9,7 +9,9 @@ Mai Tran
 # Who is your client and how will that client benefits from your end service?
 - My client is CVS, which is looking to provide more online healthcare services for its customers. Both of the healthcare providers as well as customers of CVS could benefit from this PeopleRX recommendation system to help them efficiently pick out drugs that are most suitable for their medical conditions while cutting down time and costs. 
 
-# This is a preliminary diagram of end-to-end data pipeline of PeopleRX:
+# A preliminary diagram of end-to-end data pipeline of PeopleRX:
+ <img width="750" alt="drug-rec-pipeline" src="https://user-images.githubusercontent.com/67651332/180668137-2fe89bf0-d7cc-494b-b9a6-76acf42cae5d.PNG">
+
 
 # DATA DESCRIPTION:
 # What dataset(s) do you plan to use, and how will you obtain the data? Please include a link! (The link can be to the dataset you’re downloading, the site you’re scraping, etc.)
