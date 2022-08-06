@@ -1,13 +1,6 @@
-import sqlite3
-conn = sqlite3.connect("drugdb.db")
-c = conn.cursor()
-execute(
 
-import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
-from sqlalchemy import create_engine
-from sqlalchemy import inspect
 import streamlit as st
 
 data = pd.read_csv("C:/Users/New User/Desktop/top_drugs.csv")
