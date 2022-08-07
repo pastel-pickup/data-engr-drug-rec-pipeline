@@ -13,8 +13,6 @@ def get_connection():
     fast_executemany = True
     )
 
-%%time
-
 data = pd.read_sql('SELECT * FROM dbo.mytable', engine)
 
 st.write(data)
