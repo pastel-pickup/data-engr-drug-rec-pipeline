@@ -9,7 +9,7 @@ import pymysql
 
 @st.cache(allow_output_mutation=True)
 def get_connection():
-    return create_engine("mssql+pyodbc://username:M4iSQLServer@DESKTOP-H9GNET5/mydb?driver=ODBC+Driver+17+for+SQL+Server", 
+    return create_engine("mssql+pyodbc://DESKTOP-H9GNET5\New User:M4iSQLServer@DESKTOP-H9GNET5:1433/mydb?driver=ODBC+Driver+17+for+SQL+Server&Connect+Timeout=30", 
     fast_executemany = True
     )
 
