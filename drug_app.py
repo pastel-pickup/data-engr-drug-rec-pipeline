@@ -7,16 +7,12 @@ import pymysql
 
 #creating connection
 
-engine = sqlalchemy.create_engine(
-    "mssql+pyodbc://username:M4iSQLServer@DESKTOP-H9GNET5/mydb?driver=ODBC+Driver+17+for+SQL+Server", 
-    )
-
 @st.cache(allow_output_mutation=True)
 def get_connection():
     return create_engine("mssql+pyodbc://username:M4iSQLServer@DESKTOP-H9GNET5/mydb?driver=ODBC+Driver+17+for+SQL+Server", 
     fast_executemany = True
     )
 
-data = pd.read_sql('SELECT * FROM mytable;', engine)
+data = pd.read_sql('SELECT * FROM mytable;')
 
 st.write(data)
