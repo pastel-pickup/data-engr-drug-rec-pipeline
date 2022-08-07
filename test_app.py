@@ -7,7 +7,9 @@ engine = create_engine("sqlite:///C:\\Users\\New User\\Desktop\\drugdb.db", echo
 
 data = pd.read_sql("SELECT * FROM top_drugs", con=engine, index_col='index')
 
-condition = data.condition.unique()
+data2 = pd.read_csv("C:/Users/New User/Desktop/top_drugs.csv")
+
+condition = data2.condition.unique()
 
 st.title("PeopleRX: A Drug Recommendation System For People By The People")
 
