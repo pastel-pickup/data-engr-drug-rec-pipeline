@@ -5,12 +5,9 @@ import streamlit as st
 
 engine = create_engine("sqlite:///C:\\Users\\New User\\Desktop\\drugdb.db", echo=False)
 
-#data = pd.read_sql("SELECT * FROM top_drugs", con=engine, index_col='index')
+data = pd.read_sql("SELECT * FROM top_drugs", con=engine, index_col='index')
 
-data2 = pd.read_csv("C:/Users/New User/Desktop/top_drugs.csv")
-st.write(data2)
-
-condition = data2.condition.unique()
+condition = data.condition.unique()
 
 st.title("PeopleRX: A Drug Recommendation System For People By The People")
 
