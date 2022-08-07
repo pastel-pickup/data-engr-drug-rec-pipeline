@@ -6,8 +6,6 @@ import streamlit as st
 e = create_engine("sqlite:///C:\\Users\\New User\\Desktop\\drugdb.db")
 c = e.connect()
 
-c.execute(text("SELECT * FROM top_drugs"))
-
 data = pd.read_sql("SELECT * FROM top_drugs", con=e)
 
 condition = data.condition.unique()
