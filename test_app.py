@@ -5,7 +5,7 @@ import streamlit as st
 
 engine = create_engine("sqlite:///C:\\Users\\New User\\Desktop\\drugdb.db")
 
-data = pd.read_sql("SELECT * FROM top_drugs")
+data = pd.read_sql("SELECT * FROM top_drugs", con=engine)
 
 condition = data.condition.unique()
 
