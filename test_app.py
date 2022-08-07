@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 from sqlalchemy import create_engine
-import sqlite3 as sqlite
+import sqlite3
 import streamlit as st
 
 engine = create_engine("sqlite:///C:\\Users\\New User\\Desktop\\drugdb.db")
