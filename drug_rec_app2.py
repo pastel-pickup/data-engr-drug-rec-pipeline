@@ -6,13 +6,13 @@ import pyodbc
 @st.experimental_singleton
 def init_connection():
     return pyodbc.connect(
-        "DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost"
+        "DRIVER={ODBC Driver 17 for SQL Server};SERVER="
         + st.secrets["server"]
-        + ";DATABASE=mydb"
+        + ";DATABASE="
         + st.secrets["database"]
-        + ";UID=SA"
+        + ";UID="
         + st.secrets["username"]
-        + ";PWD=M4iSQLServer"
+        + ";PWD="
         + st.secrets["password"]
     )
 
