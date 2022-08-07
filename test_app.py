@@ -3,7 +3,9 @@ import numpy as np
 from sqlalchemy import create_engine
 import streamlit as st
 
-data = pd.read_csv('C:/Users/New User/Desktop/top_drugs.csv')
+engine = create_engine("sqlite:///C:/Users/New User/Desktop/drugdb.db")
+
+data = pd.read_sql("SELECT * FROM top_drugs;", con=engine, index_col='index')
 
 condition = data.condition.unique()
 
@@ -16,7 +18,6 @@ st.subheader("Enter a medical condition:")
 st.selectbox("Condition", condition, index=1)
 
 def drug_rec(condition):
-    engine = create_engine("sqlite:///C:/Users/New User/Desktop/drugdb.db")
     drug_results = pd.read_sql("SELECT COUNT(*)OVER(PARTITION BY drugName) AS reviews, drugName, condition, rating, rank FROM drug_top WHERE condition= '+condition+' ORDER BY rating DESC;", con=engine, index_col='index')
     drug_results = drug_results.drop_duplicates()
     print(drug_results[:3])
