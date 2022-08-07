@@ -6,7 +6,7 @@ import streamlit as st
 
 engine = create_engine("sqlite:///C:\\Users\\New User\\Desktop\\drugdb.db", echo=False)
 
-meta = MetaData()
+meta = MetaData(engine)
 
 tq = text("SELECT * FROM top_drugs")
 conn = engine.connect()
