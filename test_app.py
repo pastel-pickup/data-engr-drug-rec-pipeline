@@ -3,8 +3,8 @@ import numpy as np
 from sqlalchemy import create_engine, exc
 import streamlit as st
 
-engine = create_engine("sqlite:///C:\\Users\\New User\\Desktop\\drugdb.db")
-c = engine.connect()
+e = create_engine("sqlite:///C:\\Users\\New User\\Desktop\\drugdb.db")
+c = e.connect()
 
 try:
     # suppose the database has been restarted.
@@ -21,7 +21,7 @@ c = e.connect()
 c.execute(text("SELECT * FROM top_drugs"))
 
 
-data = pd.read_sql("SELECT * FROM top_drugs", con=engine)
+data = pd.read_sql("SELECT * FROM top_drugs", con=e)
 
 condition = data.condition.unique()
 
