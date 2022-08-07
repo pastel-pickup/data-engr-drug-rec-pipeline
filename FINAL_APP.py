@@ -3,7 +3,7 @@ import numpy as np
 from sqlalchemy import create_engine, MetaData, text
 import streamlit as st
 
-engine = create_engine('sqlite:///data/drugdb.db', echo=True)
+engine = create_engine("sqlite:///C:\\Users\\New User\\Desktop\\drugdb.db", echo=False)
 
 meta = MetaData()
 
