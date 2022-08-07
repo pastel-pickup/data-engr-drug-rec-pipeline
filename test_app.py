@@ -3,7 +3,7 @@ import numpy as np
 from sqlalchemy import create_engine
 import streamlit as st
 
-data = pd.read_csv("C:/Users/New User/Desktop/top_drugs.csv")
+data = pd.read_csv(r"C:/Users/New User/Desktop/top_drugs.csv")
 
 condition = data.condition.unique()
 
