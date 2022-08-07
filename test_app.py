@@ -17,11 +17,6 @@ st.subheader("Enter a medical condition:")
 
 st.selectbox("Condition", condition, index=1)
 
-def drug_rec(condition):
-    drug_results = pd.read_sql("SELECT COUNT(*)OVER(PARTITION BY drugName) AS reviews, drugName, condition, rating, rank FROM drug_top WHERE condition= '+condition+' ORDER BY rating DESC;", con=engine, index_col='index')
-    drug_results = drug_results.drop_duplicates()
-    print(drug_results[:3])
-
 if st.button("Recommend Me:"):
     drug_rec(condition)
 
