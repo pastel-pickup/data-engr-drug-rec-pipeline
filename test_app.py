@@ -1,12 +1,13 @@
 import pandas as pd
 import numpy as np
-from sqlalchemy import create_engine, exc
+from sqlalchemy import create_engine
+import sqlite3 as sqlite
 import streamlit as st
 
-e = create_engine("sqlite:///C:\\Users\\New User\\Desktop\\drugdb.db")
-c = e.connect()
+engine = create_engine("sqlite:///C:\\Users\\New User\\Desktop\\drugdb.db")
+con = engine.connect()
 
-data = pd.read_sql("SELECT * FROM top_drugs", con=e)
+data = pd.read_sql("SELECT * FROM top_drugs")
 
 condition = data.condition.unique()
 
