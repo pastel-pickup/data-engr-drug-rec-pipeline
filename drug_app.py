@@ -7,14 +7,11 @@ import pymysql
 
 #creating connection
 
-@st.cache(allow_output_mutation=True)
-def get_connection():
-    return create_engine("mssql+pyodbc://username:M4iSQLServer@DESKTOP-H9GNET5/mydb?driver=ODBC+Driver+17+for+SQL+Server", 
-    fast_executemany = True
+engine = sqlalchemy.create_engine(
+    "mssql+pyodbc://DESKTOP-H9GNET5/New User:M4iSQLServer@DESKTOP-H9GNET5/mydb?driver=ODBC+Driver+17+for+SQL+Server", 
     )
 
-%%time
 
-data = pd.read_sql('SELECT * FROM dbo.mytable', engine)
+data = pd.read_sql('SELECT * mytable;', engine)
 
 st.write(data)
