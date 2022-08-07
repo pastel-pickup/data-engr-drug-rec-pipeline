@@ -13,6 +13,6 @@ def get_connection():
     fast_executemany = True
     )
 
-data = pd.read_sql('SELECT * FROM mytable;')
+data = pd.read_sql('SELECT * FROM mytable;', get_connection())
 
 st.write(data)
