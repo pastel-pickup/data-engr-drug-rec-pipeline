@@ -6,8 +6,10 @@ import pyodbc
 @st.experimental_singleton
 def init_connection():
     return pyodbc.connect(
-        "DRIVER={ODBC Driver 15 for SQL Server};SERVER="
+        "DRIVER={ODBC Driver 17 for SQL Server};SERVER="
         + st.secrets["server"]
+        +";PORT="
+        + st.secrets["port"]
         + ";DATABASE="
         + st.secrets["database"]
         + ";UID="
