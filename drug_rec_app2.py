@@ -8,8 +8,6 @@ def init_connection():
     return pyodbc.connect(
         "DRIVER={ODBC Driver 17 for SQL Server};SERVER="
         + st.secrets["server"]
-        +";PORT="
-        + st.secrets["port"]
         + ";DATABASE="
         + st.secrets["database"]
         + ";UID="
