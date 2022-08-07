@@ -2,6 +2,9 @@ import pandas as pd
 import numpy as np
 from sqlalchemy import create_engine
 import streamlit as st
+from app import db
+from app.drugdb import top_drugs
+db.create_all()
 
 engine = create_engine("sqlite:///C:\\Users\\New User\\Desktop\\drugdb.db")
 
