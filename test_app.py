@@ -6,20 +6,7 @@ import streamlit as st
 e = create_engine("sqlite:///C:\\Users\\New User\\Desktop\\drugdb.db")
 c = e.connect()
 
-try:
-    # suppose the database has been restarted.
-    c.execute(text("SELECT * FROM top_drugs"))
-    c.close()
-except exc.DBAPIError, e:
-    # an exception is raised, Connection is invalidated.
-    if e.connection_invalidated:
-        print("Connection was invalidated!")
-
-# after the invalidate event, a new connection
-# starts with a new Pool
-c = e.connect()
 c.execute(text("SELECT * FROM top_drugs"))
-
 
 data = pd.read_sql("SELECT * FROM top_drugs", con=e)
 
