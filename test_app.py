@@ -3,9 +3,9 @@ import numpy as np
 from sqlalchemy import create_engine
 import streamlit as st
 
-engine = create_engine("sqlite:///data/drugdb.db", echo=False)
+engine = create_engine("sqlite:////data/drugdb.db", echo=False)
 
-data = pd.read_sql("SELECT * FROM top_drugs;", con=engine, index_col='index')
+data = pd.read_sql("SELECT * FROM top_drugs", con=engine, index_col='index')
 
 condition = data.condition.unique()
 
