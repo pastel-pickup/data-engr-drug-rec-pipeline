@@ -127,10 +127,3 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-
-# .streamlit/secrets.toml
-
-server = "10.34.0.1, 1433"
-database = "mydb"
-username = "DESKTOP-H9GNET5/New User"
-password = "M4iSQLServer" 
