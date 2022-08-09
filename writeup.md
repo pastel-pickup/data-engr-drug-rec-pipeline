@@ -30,9 +30,23 @@ Drug recommendation system, PeopleRX, serves as a clinical decision support (CDS
 - The dataset used at the end for the Streamlit was filtered down to 128,451 rows with 5 columns namely "Reviews", "Drug Name", "Condition", "Rating", and "Rank".  
 
 # Algorithms 
+I. In SQL, the following functions were used to rank the drugs:
+1. RANK()
+2. COUNT()
+3. OVER(PARTITION BY)
+4. ORDER BY
+
+II. In Python, the following functions and features were used to connect to the drug database:
+1. "create_engine" via SQLAlchemy was used to connect code in Python with SQL data in SQLite3 database
+2. "pd.read_sql()" was used to read a SQL dataset into a Pandas dataframe for manipulation
+
+III. In Streamlit, the following functions and features were used to connect to the database:
+1. "create_engine" via SQLAlchemy was used to connect code in Python with SQL data in SQLite3 database
+2. "pd.read_sql()" was used to read a SQL dataset into a Pandas dataframe for manipulation
+3. "st.write()" to display dataset and other results on Streamlit
 
 # Tools
-- Numpy and Pandas for data manipulation
+- Pandas for data manipulation
 - SQLite for data storage
 - SQLAlchemy for data extraction and processing from SQLite database
 - Streamlit for web deployment
