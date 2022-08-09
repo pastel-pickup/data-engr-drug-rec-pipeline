@@ -15,7 +15,10 @@ Drug recommendation system, PeopleRX, serves as a clinical decision support (CDS
   
     <img width="600" alt="drug_rec_python" src="https://user-images.githubusercontent.com/67651332/183768792-fba64425-ddae-4c90-a88c-74b75a937d9f.PNG">
 
-5. Deploying Recommender Web-Application via Streamlit - 
+5. Deploying Recommender Web-Application via Streamlit - I was not able to integrate SQL into Streamlit via SQLAlchemy, so I hosted my dataset on Github server and was able to pull in the dataset into Streamlit to form an interactive dashboard that allows the user to sort the popular drugs based on their condition, the number of reviews the drug received, and their ratings. The dashboard was successfully deployed and it looked as follows:
+
+<img width="874" alt="drug_dashboard" src="https://user-images.githubusercontent.com/67651332/183779973-199285ff-aa77-4f8c-ac58-372707989e30.PNG">
+
 
 # Data
 - The dataset of drug reviews from University of California Irvine Machine Learning Repository was created by Surya Kallumadi and Felix Gräßer.
