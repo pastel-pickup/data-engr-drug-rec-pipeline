@@ -12,7 +12,8 @@ Drug recommendation system, PeopleRX, serves as a clinical decision support (CDS
 3. Storing Data In SQLite Database - To make the dataset compact and robust for web deployment in Streamlit, drugs with low ratings (less than 8) were removed, and only drugs with high ratings (8 or above) were kept in the dataset. A new column called "Reviews" was added to denote how many reviews were given for each drug. Duplicate rows were also removed. After this compact dataset was created, it was stored in a SQLite database. The resultant dataset was comprised of 128,451 rows with 4 columns. 
 
 4. Building Recommender - To facilitate communication between data stored in SQLite database and recommender built in Python, SQLAlchemy was used to connect SQL language with Python language. In SQL language, the RANK(), COUNT()OVER(PARTITION BY), and ORDER BY functions were used to rank the best drugs for every condition in the dataset based on 'Rating' and 'Reviews'. The recommender code in Python was successfully built and was able to retrieve accurate recommended drugs for medical conditions such as "Acne", "Depression", "HIV Infection", and "Schizophrenia" as shown below:
-  <img width="355" alt="drug_rec_python" src="https://user-images.githubusercontent.com/67651332/183768792-fba64425-ddae-4c90-a88c-74b75a937d9f.PNG">
+  
+    <img width="500" alt="drug_rec_python" src="https://user-images.githubusercontent.com/67651332/183768792-fba64425-ddae-4c90-a88c-74b75a937d9f.PNG">
 
 5. Deploying Recommender Web-Application via Streamlit - 
 
