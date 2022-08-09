@@ -13,7 +13,7 @@ Drug recommendation system, PeopleRX, serves as a clinical decision support (CDS
 
 4. Building Recommender - To facilitate communication between data stored in SQLite database and recommender built in Python, SQLAlchemy was used to connect SQL language with Python language. In SQL language, the RANK(), COUNT()OVER(PARTITION BY), and ORDER BY functions were used to rank the best drugs for every condition in the dataset based on 'Rating' and 'Reviews'. The recommender code in Python was successfully built and was able to retrieve accurate recommended drugs for medical conditions such as "Acne", "Depression", "HIV Infection", and "Schizophrenia" as shown below:
   
-    <img width="500" alt="drug_rec_python" src="https://user-images.githubusercontent.com/67651332/183768792-fba64425-ddae-4c90-a88c-74b75a937d9f.PNG">
+    <img width="600" alt="drug_rec_python" src="https://user-images.githubusercontent.com/67651332/183768792-fba64425-ddae-4c90-a88c-74b75a937d9f.PNG">
 
 5. Deploying Recommender Web-Application via Streamlit - 
 
