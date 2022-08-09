@@ -6,10 +6,13 @@ Drug recommendation system, PeopleRX, serves as a clinical decision support (CDS
 
 # Design
 1. Clean Data - The original dataset with 212,850 rows and 10 columns were cleaned by removing all columns except for 'drugName', 'condition', and 'rating'. Since there was no Natural Language Processing needed, the review column with text data was removed as well. Using 'rating' to rank the 'drugName' on a specific 'condition' was deemed sufficient to build a recommender based solely on RANK() funcion in Structured Query Language (SQL). 
-2. Explanatory Data Analysis (EDA) - 
-3. Building & Testing Recommender -
-4. Storing Data In SQLite Database - 
-5. Building & Testing Web-Application in Streamlit -
+
+3. Explanatory Data Analysis (EDA) - With 212,850 rows of data, there were only 3,665 unique drug names in the dataset along with 916 different health conditions with a rating between 1-10. 
+4. Storing Data In SQLite Database - To make the dataset compact and robust for web deployment in Streamlit, drugs with low ratings (less than 8) are removed, and only drugs with high ratings (8 or above) are kept in the dataset. Duplicate rows were also removed. After the this compact dataset was created, it was stored in SQLite database. The resultant dataset was comprised of 128,451 rows with 4 columns. 
+
+6. Building Recommender - 
+
+8. Deploying Recommender Web-Application via Streamlit -
 
 # Data
 - The dataset of drug reviews from University of California Irvine Machine Learning Repository was created by Surya Kallumadi and Felix Gräßer.
