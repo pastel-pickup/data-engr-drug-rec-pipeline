@@ -9,7 +9,7 @@ Drug recommendation system, PeopleRX, serves as a clinical decision support (CDS
 
 2. Explanatory Data Analysis (EDA) - With 212,850 rows of data, there were only 3,665 unique drug names in the dataset along with 916 different health conditions with a rating between 1-10. 
 
-3. Storing Data In SQLite Database - To make the dataset compact and robust for web deployment in Streamlit, drugs with low ratings (less than 8) were removed, and only drugs with high ratings (8 or above) were kept in the dataset. A new column called "Reviews" was added to denote how many reviews were given for each drug. Duplicate rows were also removed. After this compact dataset was created, it was stored in a SQLite database. The resultant dataset was comprised of 128,451 rows with 4 columns. 
+3. Storing Data In SQLite Database - To make the dataset compact and robust for web deployment in Streamlit, drugs with low ratings (less than 8) were removed, and only drugs with high ratings (8 or above) were kept in the dataset. A new column called "Reviews" was added to denote how many reviews were given for each drug. Duplicate rows were also removed. After this compact dataset was created, it was stored in a SQLite database. The resultant dataset was comprised of 128,451 rows with 5 columns. 
 
 4. Building Recommender - To facilitate communication between data stored in SQLite database and recommender built in Python, SQLAlchemy was used to connect SQL language with Python language. In SQL language, the RANK(), COUNT()OVER(PARTITION BY), and ORDER BY functions were used to rank the best drugs for every condition in the dataset based on 'Rating' and 'Reviews'. The recommender code in Python was successfully built and was able to retrieve accurate recommended drugs for medical conditions such as "Acne", "Depression", "HIV Infection", and "Schizophrenia" as shown below:
   
@@ -27,17 +27,15 @@ Drug recommendation system, PeopleRX, serves as a clinical decision support (CDS
 4. rating (numerical): 10 star patient rating
 5. date (date): date of review entry
 6. usefulCount (numerical): number of users who found review useful
--
--
--
+- The dataset used at the end for the Streamlit was filtered down to 128,451 rows with 5 columns namely "Reviews", "Drug Name", "Condition", "Rating", and "Rank".  
 
 # Algorithms 
 
 # Tools
 - Numpy and Pandas for data manipulation
-- Regular Expressions for text cleaning
 - SQLite for data storage
-- Streamlit for data processing & web deployment
+- SQLAlchemy for data extraction and processing from SQLite database
+- Streamlit for web deployment
 
 # Communication
 This is a Graphical User Interface (GUI) of a web-based application of the PeopleRX Recommendation System built in Streamlit:
