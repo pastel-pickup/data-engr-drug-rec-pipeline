@@ -44,6 +44,7 @@ III. In Streamlit, the following functions and features were used to connect to 
 1. "create_engine" via SQLAlchemy was used to connect code in Python with SQL data in SQLite3 database
 2. "pd.read_sql()" was used to read a SQL dataset into a Pandas dataframe for manipulation
 3. "st.write()" to display dataset and other results on Streamlit
+4. "st.title()", "st.header()", "st.subheader()", "st.selectbox()", "st.button()", "st.text()" were used to build headers, boxes, other web features on Streamlit
 
 # Tools
 - Pandas for data manipulation
