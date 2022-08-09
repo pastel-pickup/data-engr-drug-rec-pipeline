@@ -26,3 +26,14 @@ Drug recommendation system, PeopleRX, serves as a clinical decision support (CDS
 -
 
 # Algorithms 
+
+# Tools
+- Numpy and Pandas for data manipulation
+- Regular Expressions for text cleaning
+- SQLite for data storage
+- Streamlit for data processing & web deployment
+
+# Communication
+This is a Graphical User Interface (GUI) of a web-based application of the PeopleRX Recommendation System built in Streamlit:
+![image](https://user-images.githubusercontent.com/67651332/183754647-a6ad7995-d514-4f13-8123-18a1a4374e57.png)
+
