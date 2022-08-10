@@ -58,7 +58,7 @@ III. In Streamlit, the following functions and features were used to connect to 
 
 # Communication
 Here is the link the PeopleRX web application on Streamlit Cloud:
-https://pastel-pickup-data-engr-drug-rec-pipeline-pplrx-app-9vv1py.streamlitapp.com/
+ https://pastel-pickup-data-engr-drug-rec-pipeline-pplrx-app-9vv1py.streamlitapp.com/
 
 This is a Graphical User Interface (GUI) of a web-based application of the PeopleRX Recommendation System built in Streamlit:
 ![image](https://user-images.githubusercontent.com/67651332/183754647-a6ad7995-d514-4f13-8123-18a1a4374e57.png)
